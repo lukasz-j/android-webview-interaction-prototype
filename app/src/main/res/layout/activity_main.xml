@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="jelen.dashplayer.MainActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:clipToPadding="false"
+        android:fillViewport="false">
+
+        <WebView
+            android:id="@+id/playerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </WebView>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/storeConfig"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Store configuration" />
+
+    <Button
+        android:id="@+id/restoreConfig"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Restore configuration" />
+
+    <Button
+        android:id="@+id/passState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pass state" />
+
+</LinearLayout>
