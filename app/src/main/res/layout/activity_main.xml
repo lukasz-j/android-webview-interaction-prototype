@@ -26,18 +26,6 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/storeConfig"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Store configuration" />
-
-    <Button
-        android:id="@+id/restoreConfig"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Restore configuration" />
-
-    <Button
         android:id="@+id/passState"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
