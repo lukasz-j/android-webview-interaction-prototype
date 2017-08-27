@@ -25,10 +25,4 @@
 
     </ScrollView>
 
-    <Button
-        android:id="@+id/passState"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Pass state" />
-
 </LinearLayout>
