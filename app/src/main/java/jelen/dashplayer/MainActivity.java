@@ -24,6 +24,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -112,14 +113,17 @@ public class MainActivity extends AppCompatActivity {
         final ValueCallback<String> configCallback = new ValueCallback<String>() {
             @Override
             public void onReceiveValue(String value) {
+                // this may be called when web application is not initialized, so
+                // do sanity checks first
+                try {
+                    JSONArray parsed = new JSONArray(value);
+                } catch (JSONException e) {
+                    // invalid array, skip
+                    return;
+                }
                 SharedPreferences p = getSharedPreferences(PREF_FILE, 0);
                 SharedPreferences.Editor e = p.edit();
                 e.putString(PREF_PROFILES, value);
-                try {
-                    throw new Exception("test");
-                } catch (Exception e1) {
-                    e1.printStackTrace();
-                }
                 e.apply();
             }
         };
